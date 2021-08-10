@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 .header {
@@ -208,5 +209,96 @@
     }
 }
 
+.top-slider {
+
+    &__wrapper {
+        background-image: url(../images/slider/top-slider-bg.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        padding-top: 200px;
+        position: relative;
+    }
+
+    &__item {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-bottom: 250px;
+    }
+
+    &__title {
+        @extend %rubik-500;
+        font-size: 72px;
+        line-height: 70px;
+        color: #243f4d;
+        max-width: 420px;
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        font-size: 18px;
+        max-width: 370px;
+        margin-bottom: 35px;
+    }
+
+    &__btn {
+        display: block;
+        @extend %rubik-500;
+        font-size: 15px;
+        line-height: 12px;
+        color: #fff;
+        background-color: #a3bbc8;
+        padding: 22px 60px 22px 28px;
+        max-width: 200px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 22px;
+            height: 9px;
+            background-image: url(../images/icons/arrow-right.svg);
+            right: 19px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    .slick-dots {
+        display: flex;
+        position: absolute;
+        bottom: 45px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        li {
+            padding: 0 5px;
+
+            button {
+                border: none;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                cursor: pointer;
+                background-color: #fde3cc;
+                @extend %rubik-500;
+                font-size: 11px;
+                color: #243f4d;
+                outline: none;
+                transition: all .3s;
+            }
+
+            &.slick-active {
+                button {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}
+
 
 @import 'media';
+
+

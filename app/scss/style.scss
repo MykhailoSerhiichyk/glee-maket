@@ -350,9 +350,115 @@
     }
 }
 
+.products {
+    padding: 70px 0 40px;
+
+    &__buttons {
+        text-align: center;
+        margin-bottom: 75px;
+    }
+
+    &__btn {
+        display: inline-block;
+        border: none;
+        background-color: transparent;
+        @extend %dmsans-700;
+        color: #8b8b8b;
+        cursor: pointer;
+        transition: all .3s;
+
+        &.mixitup-control-active {
+            color: #191919;
+        }
+    }
+
+    &__btn + .products__btn {
+        margin-left: 15px;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        max-width: 270px;
+        width: 100%;
+        margin-bottom: 40px;
+        box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+        border-radius: 10px;
+        text-align: center;
+        min-height: 380px;
+        padding-bottom: 110px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .3s;
+
+        &:hover .products__item-menu {
+            display: flex;
+        }
+    }
+
+    &__item-box {
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        right: 0;
+    }
+
+    &__item-title {
+        @extend %dmsans-700;
+        font-size: 16px;
+        line-height: 40px;
+        color: #243f4d;
+    }
+
+    &__item-sum {
+        @extend %dmsans-700;
+        font-size: 16px;
+        line-height: 40px;
+        color: #a3bbc8;
+    }
+
+    &__item-menu {
+        display: none;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%)
+    }
+
+    &__item-menu-btn {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        transition: all .3s;
+
+        &:hover {
+            background-color: #a3bbc8;
+
+            path {
+                fill: #fff;
+            }
+        }
+    }
+
+    &__item-menu-btn + .products__item-menu-btn {
+        margin-left: 15px;
+    }
+}
+
 
 
 
 @import 'media';
 
 
+  

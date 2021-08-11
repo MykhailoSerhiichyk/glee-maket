@@ -298,6 +298,60 @@
     }
 }
 
+.advantages {
+    &__inner {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 45px 0;
+        background-color: #fef7f0;
+    }
+
+    &__item {
+        max-width: 300px;
+        width: 100%;
+        padding-left: 80px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 52px;
+            height: 54px;
+            background-image: url(../images/icons/advantages-1.png);
+            left: 0;
+            top: 0;
+        }
+    }
+
+    &__item-delivery::before {
+        width: 55px;
+        height: 37px;
+        background-image: url(../images/icons/advantages-2.png);
+    }
+
+    &__item-payment::before {
+        width: 54px;
+        height: 53px;
+        background-image: url(../images/icons/advantages-3.png);
+    }
+
+    &__item-title {
+        @extend %dmsans-700;
+        font-size: 18px;
+        line-height: 20px;
+        color: #414141;
+        margin-bottom: 10px;
+    }
+
+    &__item-text {
+        @extend %dmsans-400;
+        color: #585858;
+    }
+}
+
+
+
 
 @import 'media';
 
